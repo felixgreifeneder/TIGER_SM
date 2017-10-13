@@ -7,6 +7,7 @@
 ##minlat=number 0.01
 # Select a data between October 2014 and now, the
 # script will automatically select the closest available
+##S1_Tracknr=number 130
 # Sentinel-1 acquisition
 ##DOI=string 2015-05-01
 # Select the output directory
@@ -554,34 +555,16 @@ def estimateSMConline(modelpath,
     GEtodisk(estimated_smc, outname, outpath, sampling, roi)
 
 
-#minlon = float(sys.argv[1].strip())
-#minlon = 34.83
-#minlat = float(sys.argv[2].strip())
-#minlat = 0.01
-#maxlon = float(sys.argv[3].strip())
-#maxlon = 35.63
-#maxlat = float(sys.argv[4].strip())
-#maxlat = 0.99
 
-#year = int(sys.argv[5].strip())
-#year = 2017
-#month = int(sys.argv[6].strip())
-#month = 5
-#day = int(sys.argv[7].strip())
-#day = 1
 DDOI = dt.datetime.strptime(DOI, '%Y-%m-%d')
 year = DDOI.year
 month = DDOI.month
 day = DDOI.day
 
-#sampling = int(sys.argv[8].strip())
 sampling = 100
-#tracknr = int(sys.argv[9].strip())
-tracknr = 130
+tracknr = S1_Tracknr
 
 outpath = outdir +'/'
-#outpath = sys.argv[10]
-#outpath = 'X:/Workspaces/GrF/Processing/ESA_TIGER/QGIS_processing_script/'
 
 images = extr_GEE_array_reGE(minlon, minlat, maxlon, maxlat,
                                          year, month, day,
