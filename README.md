@@ -22,7 +22,7 @@ After the computation inside Google Earth Engine is finished, the results are ex
 As described in the manual, for the first run, the authentication can be initiated by running the quickstart.py script. To enable the download of data please modify the following line of the script: 
 SCOPES = 'https://www.googleapis.com/auth/drive.metadata.readonly' --> SCOPES = 'https://www.googleapis.com/auth/drive'
 <h3>Required Python Packages</h3>
-If executed under Windows, the script is compatible with the OSGeo4W Python distribution. The following Python libraries must be installed: \n
+If executed under Windows, the script is compatible with the OSGeo4W Python distribution. The following Python libraries must be installed: <\n>
 - google-api-python-client (see above) \n
 - earthengine-api (see above) \n
 - numpy \n
