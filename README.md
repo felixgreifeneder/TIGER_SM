@@ -18,15 +18,24 @@ Most of the data processing is executed on-line on Google Earth Engine. Therefor
 To allow the script to talk to Google Earh Engine the API has to be installed. Please follow the instructions at this link: <a href="https://developers.google.com/earth-engine/python_install_manual">GEE API</a>
 <h3>Installtion of the Google Drive API</h3>
 After the computation inside Google Earth Engine is finished, the results are exported to your Google Drive. To let the script access and download the results to you local computer, the Google Drive API has to be installed as well. Please follow the instructions here:
-<a href="https://developers.google.com/drive/v3/web/quickstart/python">Google Drive API</a> \n
+<a href="https://developers.google.com/drive/v3/web/quickstart/python">Google Drive API</a> 
+
+
 As described in the manual, for the first run, the authentication can be initiated by running the quickstart.py script. To enable the download of data please modify the following line of the script: 
 SCOPES = 'https://www.googleapis.com/auth/drive.metadata.readonly' --> SCOPES = 'https://www.googleapis.com/auth/drive'
 <h3>Required Python Packages</h3>
-If executed under Windows, the script is compatible with the OSGeo4W Python distribution. The following Python libraries must be installed: <\n>
-- google-api-python-client (see above) \n
-- earthengine-api (see above) \n
-- numpy \n
-- scipy \n
-- scikit-learn \n
+If executed under Windows, the script is compatible with the OSGeo4W Python distribution. The following Python libraries must be installed: 
+
+- google-api-python-client (see above) 
+
+- earthengine-api (see above) 
+
+- numpy 
+
+- scipy 
+
+- scikit-learn 
+
 - matplotlib
+
 - httplib2
