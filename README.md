@@ -12,7 +12,8 @@ Credit: Based on modified Copernicus Sentinel data (2015-2017)/ESA
 Please follow the installation instructions below:
 
 <h2> Installation </h2>
-Most of the data processing is executed on-line on Google Earth Engine. Therefore, the execution of this script requires a Google account and access to Google Earth Engine - we are working on an updated version that will overcome this requirement.
+Most of the data processing is executed on-line on Google Earth Engine. Therefore, the execution of this script requires a Google account and access to Google Earth Engine - we are working on an updated version that will overcome this requirement. <br />
+Clone the project directory to your .qgis2/processing/scripts directory.
 
 <h3> Installation of the Google Earh Engine API </h3>
 To allow the script to talk to Google Earh Engine the API has to be installed. Please follow the instructions at this link: <a href="https://developers.google.com/earth-engine/python_install_manual">GEE API</a>
