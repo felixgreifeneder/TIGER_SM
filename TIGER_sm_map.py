@@ -15,7 +15,11 @@
 
 import sys
 
-sys.path.append('C:\Users\FGreifeneder\.qgis2\processing\scripts\TIGER_SM')
+opos = sys.platform
+if opos == 'win32':
+    sys.path.append('%USERPROFILE%\.qgis2\processing\scripts\TIGER_SM')
+elif opos == 'linux' or opos == 'linux2':
+    sys.path.append('~/.qgis2/processing/scripts/TIGER_SM')
 
 import ee
 import datetime as dt
