@@ -10,6 +10,8 @@
 ##S1_Tracknr=number 130
 # Sentinel-1 acquisition
 ##DOI=string 2015-05-01
+# Set the user home directory
+##userdir=folder
 # Select the output directory
 ##outdir=folder
 
@@ -17,10 +19,10 @@ import sys
 
 opos = sys.platform
 if opos == 'win32':
-    sys.path.append('%USERPROFILE%\.qgis2\processing\scripts\TIGER_SM')
+    sys.path.append(userdir + '\.qgis2\processing\scripts\TIGER_SM')
 elif opos == 'linux' or opos == 'linux2':
     sys.path.append('~/.qgis2/processing/scripts/TIGER_SM')
-
+    
 import ee
 import datetime as dt
 import numpy as np
@@ -585,7 +587,7 @@ outname = 'SMCmap_' +str(int(minlon)) + str(int(minlat)) + str(int(maxlon)) + st
 
 progress.setInfo('Starting to generate map')
 
-estimateSMConline("C:/Users/FGreifeneder/.qgis2/processing/scripts/TIGER_SM/SVR_Model_Python_S1.p",
+estimateSMConline(userdir + "/.qgis2/processing/scripts/TIGER_SM/SVR_Model_Python_S1.p",
                           images[0],
                           images[2],
                           images[3],
